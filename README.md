@@ -10,6 +10,8 @@ It is designed to help beginners and intermediate programmers understand the fun
   - Stack
   - Queue
   - Linked List
+  - Tree
+  - Graph
 - Algorithms for:
   - Infix to Postfix Conversion
   - Postfix Expression Evaluation
