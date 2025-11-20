@@ -80,13 +80,19 @@ int peek(Stack *pts)
 }
 int main()
 {
-    printf("Enter 1 for push operation\n");
-    printf("Enter 2 for pop operation\n");
-    printf("Enter 3 for peek operation\n");
-    int choice, item;
-    scanf("%d", &choice);
     Stack s;
     init(&s); // Initialize the stack
+    int choice, item;
+    while(1){
+    
+
+    printf("\n---STACK OPERATIONS---\n");
+    printf("1.Push\n");
+    printf("2.Pop\n");
+    printf("3.Peek\n");
+    printf("4.Exit\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
     switch (choice)
     {
         case 1:
@@ -98,11 +104,20 @@ int main()
             pop(&s); // Call pop function
             break;
         case 3:
-            peek(&s); // Call peek function
+
+            item =peek(&s); // Call peek function
+            if(item != -999)
+                printf("Top item is %d\n", item);
+            break;
+        case 4:
+            printf("Exiting...\n");
+            return 0; // Exit the program
             break;
         default:
             printf("Invalid choice\n"); // Handle invalid input
             break;
     }
+}
+    return 0;
 }
 
